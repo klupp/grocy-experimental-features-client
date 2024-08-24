@@ -10,7 +10,7 @@ export default function Products() {
     const updateProducts = async () => {
         try {
             setLoading(true)
-            const response = await fetch('http://localhost:8000/api/products/update');
+            const response = await fetch(`${process.env.API_URL}/api/products/update`);
             setLoading(false)
         } catch (error) {
             console.error("Error creating todo:", error);
